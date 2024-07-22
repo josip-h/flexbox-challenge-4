@@ -1,0 +1,145 @@
+/* 1. CSS Reset */
+* {
+  box-sizing: border-box;
+}
+
+/* 2. CSS */
+
+/* Custom properties */
+:root {
+  /* Colors */
+  --color-white: #fff;
+  --color-black: #000;
+  --color-beige: #f3eed9;
+  --color-brown: #824936;
+  --color-dark: #222c2a;
+
+  /* Dimensions */
+  --content-max-width: 75rem;
+}
+
+body {
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Playfair Display", serif;
+  line-height: 1.2;
+  margin: 0;
+}
+
+h1 {
+  font-size: 3rem;
+  text-align: center;
+}
+
+p {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.5;
+}
+
+section {
+  padding-block: 4em;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* 3. Composition*/
+.flex--center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 4. Utility */
+.container {
+  margin: 0 auto;
+  width: 85%;
+  max-width: var(--content-max-width);
+}
+
+.image-container {
+  margin-block-start: 3em;
+}
+
+/* Colors */
+.color-background-white {
+  background: var(--color-white);
+}
+
+.color-background-beige {
+  background: var(--color-beige);
+}
+
+.color-background-dark {
+  background: var(--color-dark);
+}
+
+.color-background-brown {
+  background: var(--color-brown);
+}
+
+.color-type-white {
+  color: var(--color-white);
+}
+
+.color-type-black {
+  color: var(--color-black);
+}
+
+.color-type-brown {
+  color: var(--color-brown);
+}
+
+.color-type-beige {
+  color: var(--color-beige);
+}
+
+/* 5. Blocks */
+.section-1 {
+  min-height: 37.5rem;
+}
+
+.section-1__pretitle {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 8px;
+  margin: 0;
+}
+
+/* 6. Exceptions */
+
+/* 7. Media queries */
+@media (min-width: 37.5rem) {
+  h1 {
+    font-size: 3.75rem;
+  }
+
+  .section-2__paragraphs {
+    display: flex;
+    gap: 2em;
+  }
+
+  .section-3 .container,
+  .section-4 .container {
+    display: flex;
+    gap: 3em;
+  }
+
+  .text-container,
+  .image-container {
+    width: 100%;
+  }
+
+  .image-container {
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+  }
+}
